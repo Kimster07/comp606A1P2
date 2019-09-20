@@ -24,8 +24,8 @@
 			<h2>Home Page</h2>
 
 
-      <?php if(isset($_SESSION["username"])): ?>
-   <p> welcome back <strong><?php echo'  '. $_SESSION['username']; ?></strong></p>         <!-- show the logged in user name   -->
+      <?php if(isset($_SESSION["Firstname"])): ?>
+   <p> welcome back <strong><?php echo'  '. $_SESSION['Firstname']; ?></strong></p>         <!-- show the logged in user name   -->
 
  <?php endif ?>
 
