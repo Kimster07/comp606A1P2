@@ -1,6 +1,7 @@
  <!-- configration file for all pages   -->
 <?php
    session_start();
+   $Firstname='';
 $mysql_host='localhost';
 $mysql_user='root';
 $mysql_password='';
@@ -24,6 +25,7 @@ if(isset($_POST['register']))                                                   
  $password =$_POST['password_1'];
  $password2 = $_POST['password_2'];
  $date=$_POST['From'];
+ $appointment=$_POST['appointment'];
 
 
 
@@ -44,7 +46,7 @@ if(isset($_POST['register']))                                                   
    }
    else
     {
-     $sql="INSERT INTO user (Firstname,Lastname,Mobile_no,  email,password,date1) VALUES (' $Firstname','$Lastname','$Mobile_no','$email','$password','$date')"; //enter the userdata in database
+     $sql="INSERT INTO user (Firstname,Lastname,Mobile_no,  email,password,date1,appointment) VALUES (' $Firstname','$Lastname','$Mobile_no','$email','$password','$date','$appointment')"; //enter the userdata in database
 
 
      $result=mysqli_query($db, $sql);
@@ -93,7 +95,7 @@ if(isset($_POST['login']))                                                      
 
  if($rows==1)
  {
-   $_SESSION['email']=$email;
+   $_SESSION['Firstname']=$Firstname;
 // $_SESSION['sucess']="you are now logged in";
    header('location:profile.php');
  }
