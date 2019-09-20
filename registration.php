@@ -61,6 +61,16 @@
 
   });
   </script>
+
+  <div class="input-group">
+  <input type="radio" name="appointment" value="10am" checked> 10am<br>
+  <input type="radio" name="appointment" value="1pm"> 1am<br>
+  <input type="radio" name="appointment" value="3pm"> 3am <br>
+  <input type="radio" name="appointment" value="5pm"> 5am
+  </div>
+
+
+
   <div class="input-group">
     <button type="submit" name="register" class="btn">Register</button>
   </div>
