@@ -17,7 +17,9 @@ if($db->connect_error)
 
 if(isset($_POST['register']))                                                    //if register button click then will run
 {
- $username=$_POST['username'];
+ $Firstname=$_POST['Firstname'];
+ $Lastname=$_POST['Lastname'];
+ $Mobile_no=$_POST['Mobile_no'];
  $email=$_POST['email'];
  $password =$_POST['password_1'];
  $password2 = $_POST['password_2'];
@@ -28,21 +30,21 @@ if(isset($_POST['register']))                                                   
  if($password == $password2)
  {
 
-   $check_query = "SELECT * FROM user WHERE username='$username' OR email='$email' ";     //this will check  user already exits in database
+   $check_query = "SELECT * FROM user WHERE  email='$email' ";     //this will check  user already exits in database
    $result = mysqli_query($db, $check_query);
   // $user = mysqli_fetch_assoc($result);
 
    if (mysqli_num_rows($result) > 0)
    {
      echo '<script language="javascript">';
-     echo 'alert("Username and email alredy exits")';
+     echo 'alert("  email alredy exits")';
      echo '</script>';
 
 
    }
    else
     {
-     $sql="INSERT INTO user (username,  email,password,date1) VALUES ('$username','$email','$password','$date')"; //enter the userdata in database
+     $sql="INSERT INTO user (Firstname,Lastname,Mobile_no,  email,password,date1) VALUES (' $Firstname','$Lastname','$Mobile_no','$email','$password','$date')"; //enter the userdata in database
 
 
      $result=mysqli_query($db, $sql);
@@ -50,7 +52,7 @@ if(isset($_POST['register']))                                                   
 
      if( $result== TRUE)
           {
-       $_SESSION['username']=$username;
+       $_SESSION['Firstname']=$Firstname;
        $_SESSION['sucess']=" You are now logged in";
        header('location:profile.php');
            }
@@ -77,12 +79,12 @@ if(isset($_POST['register']))                                                   
 if(isset($_POST['login']))                                                       //if login button click then will run
 {
 
- $username=$_POST['username'];
+ $email=$_POST['email'];
  $password =$_POST['password'];
 
 
 
- $sql = "SELECT * FROM user WHERE username='$username'and password='$password' ";        //this will check if user exits
+ $sql = "SELECT * FROM user WHERE email='$email'and password='$password' ";        //this will check if user exits
 
 
  $result = mysqli_query($db,$sql) or die(mysql_error());
@@ -91,7 +93,7 @@ if(isset($_POST['login']))                                                      
 
  if($rows==1)
  {
-   $_SESSION['username']=$username;
+   $_SESSION['email']=$email;
 // $_SESSION['sucess']="you are now logged in";
    header('location:profile.php');
  }

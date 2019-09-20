@@ -18,8 +18,8 @@
   <form method="post" action="login.php">        <!-- create from for data input from user -->
 
 <div class="input-group">
-  <label>Username</label>
-  <input type="text" name="username" required>
+  <label>Email</label>
+  <input type="text" name="email" required>
 </div>
 
 <div class="input-group">

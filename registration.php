@@ -22,8 +22,16 @@
 
 
 <div class="input-group">
-  <label>username</label>
-  <input type="text" name="username" required>
+  <label>First Name</label>
+  <input type="text" name="Firstname" required>
+</div>
+<div class="input-group">
+  <label>Last Name</label>
+  <input type="text" name="Lastname" required>
+</div>
+<div class="input-group">
+  <label>Mobile Number</label>
+  <input type="number" name="Mobile_no" required>
 </div>
 <div class="input-group">
   <label>Email</label>
