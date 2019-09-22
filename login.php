@@ -1,3 +1,7 @@
+<?php
+ require 'server.php';
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,26 +102,28 @@
         
             <div class="col-md-4 col-sm-4 col-xs-12">
 
-                <form class="form-container">
+                <form class="form-container" method="post" action="login.php">   
                     <h1>Log In</h1>
         
                     <div class="form-group">
                         <label for="Email">Email address</label>
-                        <input type="email" class="form-control" id="Email" placeholder="Enter email">
+
+                        
+                        <input type="text" class="form-control" id="email",name="email" placeholder="Enter email">
                     </div>
                             
                     <div class="form-group">
                         <label for="Password">Password</label>
-                        <input type="password" class="form-control" id="Password" placeholder="Password">
+                        <input type="password" class="form-control" id="password" name="password",placeholder="Password">
                     </div>
                     <p>Forgot Password?<a href ="#"> Click here. </a></p>                    
                     <br>
 
-                    <button type="submit" class="btn btn-success btn-block">Submit</button><br>
-                    <small class="form-text text-muted">Not a member yet? Sign Up now.</small><br>
-                    <button type="submit" class="btn" id="signup_btn" href="#">Sign Up</button>
-
-        
+                     
+                    <button type="submit" class="btn" name="login">Login</button>
+                    <br>
+                   
+                   
                 </form>
         
             </div>
@@ -130,3 +136,37 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
+<?php
+
+if(isset($_POST['login']))                                                       //if login button click then will run
+{
+ $email=$_POST['email'];
+ $password =$_POST['password'];
+ $sql = "SELECT * FROM user_info WHERE Email='$email'and password='$password' ";        //this will check if user exits
+ $result = mysqli_query($db,$sql) or die(mysql_error());
+ $rows = mysqli_num_rows($result);
+ if($rows==1)
+ {
+   $_SESSION['First_Name']=$fname;
+// $_SESSION['sucess']="you are now logged in";
+   header('location:profile.php');
+ }
+ else{
+   echo '<script language="javascript">';
+   echo 'alert("Username/password is incorrect")';
+   echo '</script>';
+ }
+}
+
+
+
+?>
+
+
+ 
+
+ 
