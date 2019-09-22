@@ -1,3 +1,5 @@
+<!-- HTML  page for sign up   -->
+<?php  require 'server.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,22 +86,25 @@
 
     <div>
         <center><h2>Sign Up Form</h2></center>
-		<form action="register.php" method="post">
+		<form action="signup.php" method="post">
 			<div class="inner_container">
 				<label><b>First Name</b></label><br>
-                <input type="text" placeholder="Enter First Name" name="fname" required><br>
+                <input type="text" placeholder="Enter First Name" id="fname" name="fname" required><br>
                 <label><b>Last Name</b></label><br>
-				<input type="text" placeholder="Enter Last Name" name="lname" required><br>
+				<input type="text" placeholder="Enter Last Name" id="lname" name="lname" required><br>
 				<label><b>E-mail</b></label><br>
-				<input type="text" placeholder="Enter E-mail" name="email" required><br>
+				<input type="email" placeholder="Enter E-mail" id ="email" name="email" required><br>
 				<label><b>Contact Number</b></label><br>
-				<input type="text" placeholder="Enter Contact Number" name="cnumber" required><br>
+				<input type="number" placeholder="Enter Contact Number" id ="cnumber"name="cnumber" required><br>
 
 				<label><b>Password</b></label><br>
-				<input type="password" placeholder="Enter Password" name="password" required><br>
+				<input type="password" placeholder="Enter Password" id="password" name="password" required><br>
 				<label><b>Confirm Password</b></label><br>
-				<input type="password" placeholder="Enter Password" name="cpassword" required><br>
-				<button name="register" class="sign_up_btn" type="submit">Sign Up</button><br>
+				<input type="password" placeholder="Enter Password" id ="repassword" name="repassword" required><br>
+				<button name="register" class="sign_up_btn"   type="submit">Sign Up</button><br>
+
+
+                 
 				
 			</div>
 		</form>
