@@ -1,7 +1,7 @@
 <?php
 include('dbcon.php');
 
-function showname($uid){
+function showname($uid){                         //this function return the first name of the user 
   global $con;
 
   $sql = "SELECT `fname` FROM `users` WHERE `uid`='$uid'";
@@ -17,7 +17,7 @@ function showname($uid){
   }
 
 }
-function printname($uid)
+function printname($uid)                           //this function return the first name of the user 
 {
   global $con;
   $sql = "SELECT * FROM `users` WHERE `uid`='$uid'";
@@ -26,7 +26,7 @@ function printname($uid)
   return $data['fname'];
 
 }
-function printlname($uid)
+function printlname($uid)             //this function return the last name of the user 
 {
   global $con;
   $sql = "SELECT * FROM `users` WHERE `uid`='$uid'";
@@ -35,7 +35,7 @@ function printlname($uid)
   return $data['lname'];
 
 }
-function printemail($uid)
+function printemail($uid)               //this function return the email of the user 
 {
   global $con;
   $sql = "SELECT * FROM `users` WHERE `uid`='$uid'";
@@ -44,7 +44,7 @@ function printemail($uid)
   return $data['email'];
 
 }
-function printtimeslot($ts)
+function printtimeslot($ts)                           //this function return  time slots  
 {
   global $con;
   $sql = "SELECT * FROM `timeslot` WHERE `tid`='$ts'";
@@ -52,7 +52,7 @@ function printtimeslot($ts)
   $data = mysqli_fetch_assoc($run);
   return $data['timeslot'];
 }
-function msgtype($msgid)
+function msgtype($msgid)                   //this function return  the massage type
 {
   global $con;
   $sql = "SELECT * FROM `msgtype` WHERE `mid`='$msgid'";
@@ -74,8 +74,8 @@ function getApList($uid)
       ?>
         <tr>
           <td><?php  echo $count; ?></td>
-          <td><?php echo printname($data['uid']); ?></td>
-          <td><?php echo $data['date']; ?></td>
+          <td><?php echo printname($data['uid']); ?></td>                 <!-- calling the printname function and pass the uid argument-->
+          <td><?php echo $data['date']; ?></td>                    
           <td><?php echo printtimeslot($data['timeslot']); ?></td>
           <td><a href="user_appointment_details.php?apid=<?php echo $data['apid']; ?>" class="btn btn-info">Details</a></td>
         </tr>
@@ -93,7 +93,7 @@ function getApList($uid)
 
 }
 
-function getApListAll()
+function getApListAll()   //this function show user deatils to the admin 
 {
   global $con;
   $count = 0;
@@ -126,7 +126,7 @@ function getApListAll()
 
 }
 
-function getApDetail($apid)
+function getApDetail($apid)           //this function shows the appointment detail 
 {
   global $con;
   $count = 0;
