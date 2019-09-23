@@ -85,6 +85,14 @@ $data = getApDetail($apid)
   <h1 align="center">Appointment Details</h1>
 </div>
 
+<div clss="col-lg-6">
+
+<div class="container">
+<div class="col-md-3 col-sm-3 col-xs12"></div>
+
+  <div class="jumbotron col-md-6 col-sm-6 col-xs-12">
+
+    <!-- appointment details -->
 <table class="table-condensed">
 <tr>
   <th>Name: </th>
@@ -115,3 +123,10 @@ $data = getApDetail($apid)
   <td> <a href="canapp.php?apid=<?php echo $apid;  ?>" class="btn btn-warning btn-xs">Cancel</a> </td>
 </tr>
 </table>
+
+</div>
+
+</div>
+
+</div>
+

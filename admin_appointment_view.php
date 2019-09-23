@@ -98,33 +98,47 @@ $data = getApDetail($apid)
 	<h1 align="center">Appointment Details</h1>
 	</div>
 
-	<!-- appointment details -->
-	<table class="table-condensed">
-		<tr>
-			<th>Name: </th>
-			<td><?php echo $data[0]." ".$data[5]; ?></td>
-		</tr>
-		<tr>
-			<th>Email: </th>
-			<td><?php echo $data[6]; ?></td>
-		</tr>
-		<tr>
-			<th>Date: </th>
-			<td><?php echo $data[1]; ?></td>
-		</tr>
-		<tr>
-			<th>Time Slot: </th>
-			<td><?php echo $data[2]; ?></td>
-		</tr>
-		<tr>
-			<th>Type: </th>
-			<td><?php echo $data[3]; ?></td>
-		</tr>
-		<tr>
-			<th>Comment: </th>
-			<td><?php echo $data[4]; ?></td>
-		</tr>
 
-	</table>
+	<div clss="col-lg-6">
+
+		<div class="container">
+		<div class="col-md-3 col-sm-3 col-xs12"></div>
+
+			<div class="jumbotron col-md-6 col-sm-6 col-xs-12">
+
+				<!-- appointment details -->
+				<table class="table-condensed">
+					<tr>
+						<th>Name: </th>
+						<td><?php echo $data[0]." ".$data[5]; ?></td>
+					</tr>
+					<tr>
+						<th>Email: </th>
+						<td><?php echo $data[6]; ?></td>
+					</tr>
+					<tr>
+						<th>Date: </th>
+						<td><?php echo $data[1]; ?></td>
+					</tr>
+					<tr>
+						<th>Time Slot: </th>
+						<td><?php echo $data[2]; ?></td>
+					</tr>
+					<tr>
+						<th>Type: </th>
+						<td><?php echo $data[3]; ?></td>
+					</tr>
+					<tr>
+						<th>Comment: </th>
+						<td><?php echo $data[4]; ?></td>
+					</tr>
+
+				</table>
+			
+			</div>
+
+		</div>
+
+	</div>
 
 </body>
