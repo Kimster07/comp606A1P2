@@ -134,7 +134,7 @@ if(isset($_SESSION['uid']))
 						<input type="password" id="pass" name="pass" required class="form-control" placeholder="Enter Password">
 					</div>
 					
-					<p>Forgot Password?<a href ="forgot.php"> Click here. </a></p><br>
+					 
 
 					<input type="submit" name="submit" value="Login" class="btn btn-success form-control"> <br>
 
