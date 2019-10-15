@@ -1,11 +1,14 @@
+
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Booking</title>
-	
+
 	<!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -15,7 +18,7 @@
 
       body{
 
-      background: url(Images/Massage2.jpg) no-repeat; 
+      background: url(Images/Massage2.jpg) no-repeat;
       background-size: cover;
       background-attachment: fixed;
 
@@ -41,10 +44,10 @@
 
 				<!-- Button that toggles the navbar on and off on small screens -->
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			
+
 					<!-- Hides information from screen readers -->
 					<span class="sr-only"></span>
-				
+
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -64,7 +67,7 @@
 							<li><a href="user_logout.php">Logout</a></li>
 							<li><a href="user_dashboard.php">Back</a></li>
 						</ul>
-					
+
 					</div>
 
 				</div><!-- /.navbar-collapse -->
@@ -77,7 +80,7 @@
 
 
 
-	<div class="container"> 
+	<div class="container">
 
 
 	<?php
@@ -122,7 +125,7 @@
 	?>
 
 
-		
+
 		<div class="page-header">
 			<h1 align="center">Book Appointment</h1>
 		</div>
@@ -173,7 +176,7 @@
 				</div>
 			</form>
 		</div>
-</body> 
+</body>
 
 
 
@@ -217,6 +220,7 @@ if(isset($_POST['submit']))
 			<?php
 		}
 		else {
+      //dlkfh weuygfrekjgureuf greteryfret
 			?>
 			<script type="text/javascript">
 				alert('Error...');
